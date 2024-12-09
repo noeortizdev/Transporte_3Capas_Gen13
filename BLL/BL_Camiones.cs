@@ -8,7 +8,7 @@ using VO;
 
 namespace BLL
 {
-    public class BL_Camiones
+    public class BLL_Camiones
     {
         // Create
 
