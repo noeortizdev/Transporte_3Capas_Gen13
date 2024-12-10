@@ -7,20 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Transporte_3Capas_Gen13
+namespace Transporte_3Capas_Gen13.Catalogos.Camiones
 {
 
 
-    public partial class SiteMaster
+    public partial class Listado_Camiones
     {
 
         /// <summary>
-        /// Control MainContent.
+        /// Control Insertar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button Insertar;
+
+        /// <summary>
+        /// Control GVCamiones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVCamiones;
     }
 }

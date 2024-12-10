@@ -51,15 +51,15 @@ namespace VO
         // Datarow => Objeto ADO
         public Camiones_VO(DataRow dr)
         {
-            _ID_Camion = int.Parse(dr["ID_Camion"].ToString());
+            _ID_Camion = int.Parse(dr["ID"].ToString());
             _Matricula = dr["Matricula"].ToString();
-            _Tipo_Camion = dr["Tipo_Camion"].ToString();
+            _Tipo_Camion = dr["Tipo"].ToString();
             _Marca = dr["Marca"].ToString();
             _Modelo = dr["Modelo"].ToString();
-            _Capacidad = int.Parse(dr["Capacidad"].ToString());
-            _Kilometraje = double.Parse(dr["Kilometraje"].ToString());
-            _UrlFoto = dr["UrlFoto"].ToString();
-            _Disponibilidad = bool.Parse(dr["Disponibilidad"].ToString());
+            _Capacidad = int.Parse(dr["Capacidad (kg)"].ToString());
+            _Kilometraje = double.Parse(dr["Kilometraje (km)"].ToString());
+            _UrlFoto = dr["Foto"].ToString();
+            _Disponibilidad = bool.Parse(dr["disponibilidad"].ToString());
         }
     }
 }
