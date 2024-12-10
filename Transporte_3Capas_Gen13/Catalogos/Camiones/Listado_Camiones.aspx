@@ -35,7 +35,7 @@
 
                             <EditItemTemplate>
                                 <div style="width: 100%">
-                                    <div style="width: 25%"; margin: 0 auto>
+                                    <div style="width: 25%; margin: 0 auto">
                                         <asp:CheckBox ID="chkEditDisponible" runat="server" Checked='<%#Eval("Disponibilidad")%>' />
                                     </div>
                                 </div>
