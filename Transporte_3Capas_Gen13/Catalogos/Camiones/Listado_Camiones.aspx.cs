@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Transporte_3Capas_Gen13.Utilidades;
 
 namespace Transporte_3Capas_Gen13.Catalogos.Camiones
 {
@@ -54,6 +55,8 @@ namespace Transporte_3Capas_Gen13.Catalogos.Camiones
             }
 
             // Sweet Alert.
+            // Debemos importar el "using" de <NOMBRE_DE_TU_PROYECTO>.Utilidades".
+            SweetAlert.Sweet_Alert(titulo, msg, tipo, this.Page, this.GetType());
             // Recargamos la página.
             CargarGrid();
         }

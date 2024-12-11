@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Transporte_3Capas_Gen13.Utilidades;
 using VO;
 
 namespace Transporte_3Capas_Gen13.Catalogos.Camiones
@@ -153,7 +154,18 @@ namespace Transporte_3Capas_Gen13.Catalogos.Camiones
                 }
 
                 // Preparamos la salida para cachar un error y mostrar el Sweet Alert.
-                if (salida.ToUpper().Contains("ERROR")) { } else { }
+                if (salida.ToUpper().Contains("ERROR"))
+                {
+                    titulo = "Ops...";
+                    respuesta = salida;
+                    tipo = "warning";
+                }
+                else
+                {
+                    titulo = "Correcto";
+                    respuesta = salida;
+                    tipo = "success";
+                }
             }
             catch (Exception ex)
             {
@@ -162,6 +174,7 @@ namespace Transporte_3Capas_Gen13.Catalogos.Camiones
                 tipo = "error";
             }
             // Sweet Alert.
+            SweetAlert.Sweet_Alert(titulo, respuesta, tipo, this.Page, this.GetType(), "/Catalogos/Camiones/Listado_Camiones.aspx");
         }
     }
 }
