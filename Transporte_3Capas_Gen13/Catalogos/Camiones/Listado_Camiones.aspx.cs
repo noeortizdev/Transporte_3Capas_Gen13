@@ -34,7 +34,28 @@ namespace Transporte_3Capas_Gen13.Catalogos.Camiones
 
         protected void GVCamiones_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            // Recupero el ID del renglón afectado.
+            int id_Camion = int.Parse(GVCamiones.DataKeys[e.RowIndex].Values["ID_Camion"].ToString());
+            // Invoco mi método para eliminar mi camión.
+            string respuesta = BLL_Camiones.Eliminar_Camion(id_Camion);
+            // Preparamos el Sweet Alert
+            string titulo, msg, tipo;
+            if (respuesta.ToUpper().Contains("ERROR"))
+            {
+                titulo = "Error";
+                msg = respuesta;
+                tipo = "error";
+            }
+            else
+            {
+                titulo = "Correcto!";
+                msg = respuesta;
+                tipo = "sucees";
+            }
 
+            // Sweet Alert.
+            // Recargamos la página.
+            CargarGrid();
         }
 
         protected void GVCamiones_RowCommand(object sender, GridViewCommandEventArgs e)
